@@ -1,17 +1,23 @@
-
+import React from 'react';
 import './App.css';
-import screenshot from './images/found_04_jabrayilova.jpg';
+import { motion } from 'framer-motion';
+import Header from './components/Header';
+import AboutMe from './components/AboutMe';
+import Experience from './components/Experience';
+
 function App() {
   return (
-    <div>
-      <h1>Hello, mtc!</h1>
-      <p>Welcome to my first React app.</p>
-      <img
-        src={screenshot}
-        alt="fi"
-        className="image"
-        />
-      </div>
+    <div className="App">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Header />
+        <AboutMe />
+        <Experience />
+      </motion.div>
+    </div>
   );
 }
 
