@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import './Header.css';  // Ensure this file contains your styles for animations
 
 function Header() {
   return (
@@ -9,8 +10,11 @@ function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <h1>Fidan Jabrayilova</h1>
-      <p>Welcome to my personal website. I'm a Cognitive Science major with a focus on Design and Interaction at UC San Diego (UCSD).</p>
+      <div className="intro">
+        <h2 className="subtitle">UX Designer</h2>
+        <h1 className="name">Fidan Jabrayilova</h1>
+      </div>
+      <div className="bubble-animation"></div>
     </motion.header>
   );
 }
